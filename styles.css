@@ -1,0 +1,33 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Create a container for the divisions */
+.container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space evenly between the divisions */
+    flex-wrap: wrap; /* Allow divisions to wrap to the next line on smaller screens */
+}
+
+/* Style each division */
+.division {
+    flex: 1; /* Make each division take equal space */
+    max-width: 48%; /* Limit the width to prevent overlapping on small screens */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack divisions on top of each other */
+    }
+
+    .division {
+        max-width: 100%; /* Allow divisions to take full width on small screens */
+    }
+}
